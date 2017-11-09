@@ -18,7 +18,7 @@
 
 \section{Priorities}
 \subsection{Educational mission}
-This activity will  develop infrastructure for distributed processing, that complements the existing support for cloud computing. This infrastructure will enable us to educate the students with hands-on experience on algorithms that exploit parallel processing in a distributed mode. Such algorithms are in common use. (Here I need some numbers from reliable sources.)
+This activity will  develop infrastructure for distributed processing, that complements the existing support for cloud computing. This infrastructure will enable us to educate the students with hands-on experience on algorithms that exploit parallel processing in a distributed mode. Such algorithms include Hadoop's Map Reduce applied to a gene analysis toolkit \cite{mckenna2010genome,taylor2010overview}, and work with FASTA and FASTQ files \cite{ferraro2017fastdoop}.
 
 We would like to extend our research in the learning of students of computer science about mathematical proofs \cite{smith2013mathematization,smith2014computer,smith2016categories} to mathematical proofs about software executing in distributed systems, as are given in Lynch's Distributed Algorithms \cite{lynch1996distributed}.
 \subsection{Visibility}
@@ -158,17 +158,23 @@ We have a three-fold purpose:
 \end{itemize}
 
 \subsubsection{Outline of Related Research}%selves and others
-Odom et al. \cite{aakelly2015malaria} developed a breath test for malaria.
+Odom et al. \cite{kelly2015malaria} developed a breath test for malaria.
 
 \subsection{Work Plan}%show soundness
 The software infrastructure, a modification of Hadoop, has been developed by Roland DiPratti.
 The plan is to identify machines onto which we can install this software, to make an operating facility.
 We plan to use machines obtained separately from the grant.
+T. Smith has some Raspberry Pi machines to offer, on a temporary to-be-returned basis, to the project. Hadoop has been shown by \cite{pihadoop} to be suitable for Raspberry Pi clusters.
+Raspberry Pis are small, which implies our need for space to be only a few square feet.
 Then we plan to install and verify the installation of the modified Hadoop.
 Then we plan to install software used by the application, including Python and R, which are generally useful packages.
+We plan to investigate a programmatic interface to Mathematica, as it is said to be installed on the Raspberry Pis.
+In particular, we would like to be able to interoperate Mathematica and R with the modified Hadoop.
 Then we plan to install software used by the application, a survival analysis package of R, which is more focussed in purpose, though of interest to both insurance and medical applications.
-Then we plan to load and execute our first application, which is expected to be the biomarker software, which uses Python and R. 
+Then we plan to load and execute our first application, which is expected to be the biomarker software, which uses Python and R.  This software might be converted into strictly R, if that seems to be desirable.
  We plan to apply the biomarker software to larger datasets than those to which it has been applied so far; this will be facilitated by the modified Hadoop software.
+ We plan to coordinate this facility's capabilities with BioMolecular Science, in order to support any interest they may have in a specialization of software engineering for computational medicine.
+ We plan to coordinate this facility's capabilities with BioMolecular Science, in order to support any computational facility they might find useful.
  \subsection{Outcomes and Reporting}
  
  It is certainly our intention to submit the results of our biomarker research to a journal such as BMC Bioinformatics (\url{https://link.springer.com/journal/12859}). This research is related to our previous research \cite{ammar2013developing}.
@@ -180,11 +186,22 @@ Then we plan to load and execute our first application, which is expected to be 
  %realistic, appendix a3, clearly stated, justified, consistent with purpose, work plan, outcomes
  %pages do not count in page count
  
+ Do we need to estimate the impact on the electric bill? Air conditioning will probably not be affected.
+ 
  \subsection{CVs}
  %do not count in page count, cannot be more than 2 pages per person
  \subsection{Joint proposal individual contributions and level of participation}
  %adds one page / 240 words per additional faculty member
+ 
+ T. Smith has contributed, on a to-be-returned basis, the initial hardware.
+ 
+ T. Smith intends to devote 50\% time in the summer, and over the break between fall and spring semesters, to this activity.
+ 
+ R. DiPratti intends to contribute the modified Hadoop software, and to install it on any machines used in the platform.
+ 
  \subsection{Bibliography} %does not count in page count
+ \bibliographystyle{alpha}
+ \bibliography{lit}
  \subsection{Optional Appendices} %do not count in page count
  
  
@@ -200,6 +217,5 @@ Then we plan to load and execute our first application, which is expected to be 
 %\section{review process and announcement of awards (consistent with contractually established schedules)}
 %\section{cover sheet to be attached to each proposal}
 
-\bibliographystyle{alpha}
-\bibliography{lit}
+
 \end{document}
